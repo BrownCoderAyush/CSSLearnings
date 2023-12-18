@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+        }
+        .static{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .moving{
+            height: 50px;
+            width: 50px;
+            border:solid red 5px;
+            border-top: none;
+            /* background-color: blue; */
+            border-radius: 50%;
+            animation-name: rotator;
+            animation-iteration-count: infinite;
+            animation-duration:10s;
+            animation-timing-function: ease-out;
+        }
+        @keyframes rotator {
+            0%{
+                /* transform: rotate(0deg); */
+                /* background-color: aqua; */
+                transform: translateX(-500px);
+            }
+            50%{
+                background-color: green;
+                transform: translateX(500px);
+            }
+            100%{
+                /* transform: rotate(180deg); */
+                background-color: red;
+                transform: translateX(-500px);
+            }
+        }
+        .moving:hover{
+            /* <!--Scew, scale, translate, rotate--> */
+            /* transform: rotate(180deg); */
+            /* transition-delay: 2s; */
+            /* transition-duration: 4s; */
+            /* background-color: red; */
+            /* transition-property: all; */
+            /* transition-timing-function: ease-out; */
+
+            animation-name: rotator;
+            animation-iteration-count: infinite;
+            animation-duration:10s;
+            animation-timing-function: ease-out;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="row">
+        <div class="static">
+            
+        </div>
+        <div class="moving">
+
+        </div>
+        <div class="static">
+
+        </div>
+    </div>
+</body>
+</html>

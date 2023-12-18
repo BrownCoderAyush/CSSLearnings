@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        box-sizing: border-box;
+    }
+    * , *::after, *::before{
+        box-sizing: inherit;
+    }
+    #parent{
+        border: solid red 10px;
+        box-sizing: content-box;
+        display: flex;
+        /* row reverse , column reverse  */
+        flex-wrap: nowrap;
+        /* default value nowrap */
+        justify-content: space-around;
+
+        /* flex direction and justify-content helps us do a lot along main axis */
+        /* align items and align content helps us do along cross axis  */
+
+    }
+    #parent div{
+        border: solid blue 2px;
+        padding: 20px;
+        background-color: bisque;
+        min-width: 100px;
+        max-width: 200px;   
+    }
+</style>
+<body>
+    <div id="parent">
+        <div>
+            Child 1 
+        </div>
+        <div>
+            Child 2 , some more content bigger than others 
+        </div>
+        <div>
+            Child 3
+        </div>
+        <div>
+            Child 4
+        </div>
+        <div>
+            Child 5 , some more content bigger than others 
+        </div>
+    </div>
+</body>
+</html>

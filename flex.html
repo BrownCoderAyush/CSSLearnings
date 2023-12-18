@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* https://css-tricks.com/box-sizing/ */
+         html{
+            box-sizing: border-box;
+
+        }
+        *,*:before,*:after{
+            box-sizing: inherit;
+        }
+
+        #parent{
+            /* <!--flex container--> */
+            border: solid red 10px;
+            height: 400px;
+            display : flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* to align items on main axis  */
+            justify-content: space-around;
+            /* to aligh along the cross axis  */
+            align-items: center;
+            align-content: space-around;  ;
+        }
+
+        #parent div{
+            /* <<!--flex items--> */
+            border: solid blue 2px;
+            padding: 20px;
+            background-color: bisque;
+            min-width:100px;
+        }
+
+        #child1{
+            flex-basis: 100%;
+        }
+
+        #child2{
+            flex-grow: 1;
+        }
+        #child3{
+            flex-grow: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent"><!-- Flex container-->
+        <div id="child1">Child1</div><!--Flex items-->
+        <div id="child2">Child2 , is greater than child 1</div>
+        <div id="child3">Child3</div>
+        <div id="child4">Child4 , is smaller than child 5</div>
+        <div id="child5">Child5</div>
+    </div>
+</body>
+</html>

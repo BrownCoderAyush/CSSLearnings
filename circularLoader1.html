@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     html{
+        box-sizing: border-box;
+    }
+    * , *::after, *::before{
+        box-sizing: inherit;
+    }
+    @keyframes loader {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    #loader1{
+        /* background-color: aliceblue; */
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #loader1 > div{
+        border: solid red 5px;
+        height: 50px;
+        width: 50px;
+        border-top: solid white 5px;
+        border-radius: 50%;
+        animation-name: loader;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+</style>
+<body>
+    <div id="loader1">
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* https://css-tricks.com/box-sizing/ */
+        html{
+            box-sizing: border-box;
+
+        }
+        *,*:before,*:after{
+            box-sizing: inherit;
+        }
+
+        #demo1{
+            width: 200px;
+            border: solid red 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #demo2{
+            width: 200px;
+            border: solid red 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            /* this is parent  */
+            box-sizing: content-box;
+        }
+        #demo3{
+            width: 140px;
+            border: solid blue 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo1">
+        Hey there1
+    </div>
+    <div id="demo2">
+        Hey there2
+        <div id="demo3">
+            This is the child of demo2
+        </div>
+    </div>
+</body>
+</html>
